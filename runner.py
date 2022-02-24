@@ -5,7 +5,7 @@ FILE_PATH = "programming-task-example-data.log"
 TOP_X = 3
 
 def main(file_path, top_x):
-    parsed_logs = http_request_log_reader.txt_file(file_path)
+    parsed_logs = http_request_log_reader.log_file(file_path)
 
     # Print the number of unique IP addresses 
     print(f"Number of unique IP addresses is {len(parsed_logs.IP_freq_dict)}")

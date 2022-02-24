@@ -4,7 +4,7 @@ def by_occurrance_then_name(item_dict):
     >>> by_occurrance_then_name({'item_1': 1, 'item_2': 2, 'item_3': 3})
     ['item_3', 'item_2', 'item_1']
 
-    TEST: sort by name in case of a tie
+    TEST: sort alphabetically by name in case of a tie
     >>> by_occurrance_then_name({'item_a': 3, 'item_c': 3, 'item_b': 2, 'item_d': 1})
     ['item_a', 'item_c', 'item_b', 'item_d']
 
