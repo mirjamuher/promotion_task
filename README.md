@@ -16,11 +16,13 @@ I recommend following this tutorial on how to install VS Code and set your compu
 
 ### How to run this program to check the solution for the technical interview task
 
-Navigate to `runner.py` and run the file OR run `$pyton3 runner.py` to see the output for the supplied example logs
+Navigate to `runner.py` and run the file 
+OR run `$ python3 runner.py` to see the output for the supplied example logs
+OR run `$ python3 runner.py -f [log_file_path] -n [top_n]`
 
 ### How to use this library with your own log file
 
-You can update the `FILE_PATH` with an alternative path to run your logs, or call `main()` with the file path and top_x integer.
+You can call `main()` from your program with the file path and top_N integer.
 
 ## How to test it
 
