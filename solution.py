@@ -5,10 +5,10 @@ import re
 # Task
 ###
 def main(file_path):
-    logs, IP_dict = read_file(file_path)
+    urls, IP_dict = read_file(file_path)
     print_no_of_unique_IP_addresses(IP_dict)
     print_top_3_IP_addresses(IP_dict)
-    print_top_3_visited_URLs(logs)
+    print_top_3_visited_URLs(urls)
 
 ###
 # Main Functions
@@ -24,7 +24,7 @@ def read_file(file_path):
             ip = line.split()[0]
             IP_dict[ip] += 1
     
-    return logs, IP_dict
+    return URL_dict, IP_dict
 
 def print_no_of_unique_IP_addresses(IP_dict):
     """
