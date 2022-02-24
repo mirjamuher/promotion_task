@@ -1,7 +1,7 @@
 from collections import defaultdict
 import re
 
-class Parsed_Logs:
+class ParsedLogs:
     def __init__(self, URL_freq_dict, IP_freq_dict):
         self.URL_freq_dict = URL_freq_dict
         self.IP_freq_dict = IP_freq_dict
@@ -22,7 +22,7 @@ def log_file(file_path):
             if ip:
                 IP_freq_dict[ip] += 1
     
-    return Parsed_Logs(URL_freq_dict, IP_freq_dict)
+    return ParsedLogs(URL_freq_dict, IP_freq_dict)
 
 def parse_IP_address(line):
     """

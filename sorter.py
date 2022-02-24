@@ -1,6 +1,6 @@
 def by_occurrance_then_name(item_dict):
     """
-    TEST: sort dictionary items descendingly by count
+    TEST: sort dictionary items by count in descending order
     >>> by_occurrance_then_name({'item_1': 1, 'item_2': 2, 'item_3': 3})
     ['item_3', 'item_2', 'item_1']
 

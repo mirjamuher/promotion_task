@@ -35,6 +35,9 @@ Error Handling:
 1. As this is a standalon program and I time-boxed my solution, no error-handling has been implemented. This should be added if this was to be used as a component in a larger project
 2. If less than N valid log lines are provided, the program will just return what is there. If that is not-desired behaviour, the code would need fitting amendment
 
+`main()`:
+To easily show the code working for the questions posed in the technical interview, `main()` currently prints the answers to the three posed questions. If this library was to be used as a component in a bigger project, it would be sensible to change `main()` to just return the `ParsedLogs` object, and add methods to it (such as checking the length of all IP addresses, or the top N URLs)
+
 Other recommended improvements:
 - add linting and type-checking
 - add further type of file readers to `http_request_log_reader` if necessary
