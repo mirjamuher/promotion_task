@@ -37,11 +37,11 @@ def parse_url(line):
     >>> parse_url('177.71.128.21 - - [10/Jul/2018:22:21:28 +0200] "GET /example/1 HTTP/1.1" 200 3574 "-" "Mozilla/5.0 (X11; U; Linux x86_64; fr-FR) AppleWebKit/534.7 (KHTML, like Gecko) Epiphany/2.30.6 Safari/534.7"\\n')
     '/example/1'
    
-    TEST: full http url is parsed correctly
+    TEST: full `http` url is parsed correctly
     >>> parse_url('177.71.128.21 - - [10/Jul/2018:22:21:28 +0200] "GET http://example.net/1/ HTTP/1.1" 200 3574 "-" "Mozilla/5.0 (X11; U; Linux x86_64; fr-FR) AppleWebKit/534.7 (KHTML, like Gecko) Epiphany/2.30.6 Safari/534.7"\\n')
     'http://example.net/1/'
 
-    TEST: full https url is parsed correctly 
+    TEST: full `https` url is parsed correctly 
     >>> parse_url('177.71.128.21 - - [10/Jul/2018:22:21:28 +0200] "GET https://example.net/1/ HTTP/1.1" 200 3574 "-" "Mozilla/5.0 (X11; U; Linux x86_64; fr-FR) AppleWebKit/534.7 (KHTML, like Gecko) Epiphany/2.30.6 Safari/534.7"\\n')
     'https://example.net/1/'
 
@@ -51,9 +51,6 @@ def parse_url(line):
     TEST: empty string returns nil
     >>> parse_url('')
     """
-    # to parse out only full urls, use re.compile("GET (https?:\/\/.*?) HTTP")
-    # to parse only url paths, use re.compile("GET (\/.*?) HTTP")
-
     # parse full urls & url paths
     pattern = re.compile("GET (.*?) HTTP")
     result = pattern.search(line)
