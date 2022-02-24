@@ -12,21 +12,19 @@ The file path and the top x can be supplied from outside; for this example, the 
 
 ### How to set your computer up with Python
 
-1. Download a good IDE (I recommend VSCode)
-2. Donwload Python (follow instructions on https://www.python.org/downloads/)
-3. Ensure you have all necessary extensions installed in your IDE (e.g. Python in VSCode)
+I recommend following this tutorial on how to install VS Code and set your computer up for Python: https://code.visualstudio.com/docs/python/python-tutorial
 
-### How to run this program to check the solution
+### How to run this program to check the solution for the technical interview task
 
-Navigate to `runner.py` and run the file to see the output for the supplied example logs
+Navigate to `runner.py` and run the file OR run `$pyton3 runner.py` to see the output for the supplied example logs
 
 ### How to use this library with your own log file
 
-You can update the `FILE_PATH` with an alternative path to run your logs, or call `main()` with the file path and top_x integer you want to try out
+You can update the `FILE_PATH` with an alternative path to run your logs, or call `main()` with the file path and top_x integer. 
 
 ## How to test it
 
-Run helper files like `sorter.py` or `http_request_log_reader.py` and `doctest` will automatically run all tests
+Run helper files like `sorter.py` or `http_request_log_reader.py` and `doctest` will automatically run all tests.
 
 ## Assumptions
 
