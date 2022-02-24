@@ -19,7 +19,8 @@ def log_file(file_path):
 
             # store IPs in dictionary
             ip = parse_IP_address(line)
-            IP_freq_dict[ip] += 1
+            if ip:
+                IP_freq_dict[ip] += 1
     
     return Parsed_Logs(URL_freq_dict, IP_freq_dict)
 
@@ -33,7 +34,7 @@ def parse_IP_address(line):
 
 def parse_url(line):
     """
-    TEST: url paths is prased correctly
+    TEST: url path is parsed correctly
     >>> parse_url('177.71.128.21 - - [10/Jul/2018:22:21:28 +0200] "GET /example/1 HTTP/1.1" 200 3574 "-" "Mozilla/5.0 (X11; U; Linux x86_64; fr-FR) AppleWebKit/534.7 (KHTML, like Gecko) Epiphany/2.30.6 Safari/534.7"\\n')
     '/example/1'
    
@@ -45,10 +46,10 @@ def parse_url(line):
     >>> parse_url('177.71.128.21 - - [10/Jul/2018:22:21:28 +0200] "GET https://example.net/1/ HTTP/1.1" 200 3574 "-" "Mozilla/5.0 (X11; U; Linux x86_64; fr-FR) AppleWebKit/534.7 (KHTML, like Gecko) Epiphany/2.30.6 Safari/534.7"\\n')
     'https://example.net/1/'
 
-    TEST: string without valid url returns nil
+    TEST: string without valid url returns None
     >>> parse_url("test-string 1234 http: https: url.com")  
 
-    TEST: empty string returns nil
+    TEST: empty string returns None
     >>> parse_url('')
     """
     # parse full urls & url paths

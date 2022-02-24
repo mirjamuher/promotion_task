@@ -4,9 +4,9 @@ This is my solution for Digio's technical interview task
 
 ## What does it do?
 
-This code will take a .log file and parse out the IP addresses and URLs. It will then sort these first by occurance, then by name, and print the top x common ones. 
+This code will take a .log file and parse out the IP addresses and URLs. It will then sort these first by occurance, then by name, and print the top N common ones. 
 
-The file path and the top x can be supplied from outside; for this example, the function defaults to supplied global variables. 
+The file path and the top N can be supplied from outside; for this example, the function defaults to supplied global variables. 
 
 ## How to run it
 
@@ -20,7 +20,7 @@ Navigate to `runner.py` and run the file OR run `$pyton3 runner.py` to see the o
 
 ### How to use this library with your own log file
 
-You can update the `FILE_PATH` with an alternative path to run your logs, or call `main()` with the file path and top_x integer. 
+You can update the `FILE_PATH` with an alternative path to run your logs, or call `main()` with the file path and top_x integer.
 
 ## How to test it
 
@@ -36,7 +36,7 @@ Error Handling:
 1. As this is a standalon program and I time-boxed my solution, no error-handling has been implemented. This should be added if this was to be used as a component in a larger project
 2. If less than x logs are provided, the program will just return what is there. If that is not-desired behaviour, the code would need fitting amendment
 
-Other improvements:
+Other recommended improvements:
 - add linting and type-checking
 - add further type of file readers to `http_request_log_reader` if necessary
 - IP addresses are currently not validated, would be a good addition
