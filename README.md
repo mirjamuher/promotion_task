@@ -4,9 +4,7 @@ This is my solution for Digio's technical interview task
 
 ## What does it do?
 
-This code will take a .log file and parse out the IP addresses and URLs. It will then sort these first by occurance, then by name, and print the top N common ones. 
-
-The file path and the top N can be supplied from outside; for this example, the function defaults to supplied global variables. 
+This code will take a .log file and parse out the IP addresses and URLs. It will then sort these first by occurance, then by name, and print the top N common ones.
 
 ## How to run it
 
@@ -31,12 +29,11 @@ Run helper files like `sorter.py` or `http_request_log_reader.py` and `doctest` 
 ## Assumptions
 
 URLS:
-1. Full URLs and URL paths are treated equally by my code. To only parse full URLs, update the regex to "GET (https?:\/\/.*?) HTTP". To only parse url paths, update regex to "GET (\/.*?) HTTP". You will have to update the tests accordingly
-2. In line with the supplied example file, my code scans for GET requests only. If you want to also scan for other types, you can do so by updating the regex (and tests)
+1. Full URLs and URL paths are treated equally by my code. To only parse full URLs, update the regex to `\"[A-Z]+ (https?:\/\/.*?) HTTP`. To only parse url paths, update regex to `\"[A-Z]+ (\/.*?) HTTP`. You will have to update the tests accordingly
 
 Error Handling:
 1. As this is a standalon program and I time-boxed my solution, no error-handling has been implemented. This should be added if this was to be used as a component in a larger project
-2. If less than x logs are provided, the program will just return what is there. If that is not-desired behaviour, the code would need fitting amendment
+2. If less than N valid log lines are provided, the program will just return what is there. If that is not-desired behaviour, the code would need fitting amendment
 
 Other recommended improvements:
 - add linting and type-checking

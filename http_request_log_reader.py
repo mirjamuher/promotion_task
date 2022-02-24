@@ -53,7 +53,7 @@ def parse_url(line):
     >>> parse_url('')
     """
     # parse full urls & url paths
-    pattern = re.compile("GET (.*?) HTTP")
+    pattern = re.compile("\"[A-Z]+ (.*?) HTTP")
     result = pattern.search(line)
     if result:
         return result.group(1)
